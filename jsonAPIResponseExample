@@ -1,0 +1,132 @@
+# FortniteTracker API
+
+## Get Fornite BR Player Stats
+
+GET https://api.fortnitetracker.com/v1/profile/{platform}/{epic-nickname}
+
+Platforms: pc, xbl, psn
+
+
+## Get Fornite Match History
+
+GET https://api.fortnitetracker.com/v1/profile/account/{accountId}/matches
+
+Account ID: A Guid, found in the Get BR Player Stats Endpoint.
+
+
+## Get Current Fortnite Store
+
+GET https://api.fortnitetracker.com/v1/store
+
+
+## Get Current Active Challenges
+
+GET https://api.fortnitetracker.com/v1/challenges
+
+
+## Documentation
+
+Hit those endpoints, it's self documenting. :)
+
+#lifetime
+wins
+score
+kills
+Matches Played
+
+
+#solos (p2)
+wins (top 1)
+kills
+score
+top 10
+top 25
+
+#duos (p10)
+wins (top 1)
+kills
+score
+top 5
+top 12
+
+#squads (p9)
+wins (top 1)
+kills
+score
+top 3
+top 6
+
+
+
+Response from API
+URL = 'https://api.fortnitetracker.com/v1/profile/psn/mba_53'
+
+{
+'accountId': 'b4c4e32f-2c2c-4486-9faf-f9e6dfd7b1d8', 
+'platformId': 2, 
+'platformName': 'psn', 
+'platformNameLong': 'PlayStation 4', 
+'epicUserHandle': 'MBA_53', 
+
+'stats': 
+{
+
+'p2': {'trnRating': {'label': 'TRN Rating', 'field': 'TRNRating', 'category': 'Rating', 'valueInt': 1181, 'value': '1181', 'rank': 26625148, 'percentile': 57.0, 'displayValue': '1,181'}, 'score': {'label': 'Score', 'field': 'Score', 'category': 'General', 'valueInt': 46370, 'value': '46370', 'rank': 10496844, 'percentile': 17.0, 'displayValue': '46,370'}, 'top1': {'label': 'Wins', 'field': 'Top1', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 13844213, 'displayValue': '0'}, 'top3': {'label': 'Top 3', 'field': 'Top3', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top5': {'label': 'Top 5', 'field': 'Top5', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top6': {'label': 'Top 6', 'field': 'Top6', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top10': {'label': 'Top 10', 'field': 'Top10', 'category': 'Tops', 'valueInt': 32, 'value': '32', 'rank': 10826514, 'percentile': 21.0, 'displayValue': '32'}, 'top12': {'label': 'Top 12', 'field': 'Top12', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top25': {'label': 'Top 25', 'field': 'Top25', 'category': 'Tops', 'valueInt': 96, 'value': '96', 'rank': 10114800, 'percentile': 14.0, 'displayValue': '96'}, 'kd': {'label': 'K/d', 'field': 'KD', 'category': 'General', 'valueDec': 0.22, 'value': '0.22', 'rank': 28414466, 'percentile': 95.0, 'displayValue': '0.22'}, 'winRatio': {'label': 'Win %', 'field': 'WinRatio', 'category': 'General', 'valueDec': 0.0, 'value': '0', 'rank': 13827373, 'displayValue': '0.00'}, 'matches': {'label': 'Matches', 'field': 'Matches', 'category': 'General', 'valueInt': 476, 'value': '476', 'rank': 8705269, 'percentile': 8.0, 'displayValue': '476'}, 'kills': {'label': 'Kills', 'field': 'Kills', 'category': 'General', 'valueInt': 107, 'value': '107', 'rank': 14494740, 'percentile': 46.0, 'displayValue': '107'}, 'kpg': {'label': 'Kills Per Match', 'field': 'KPG', 'category': 'General', 'valueDec': 0.22, 'value': '0.22', 'rank': 28412124, 'percentile': 95.0, 'displayValue': '0.22'}, 'scorePerMatch': {'label': 'Score per Match', 'field': 'ScorePerMatch', 'category': 'General', 'valueDec': 97.42, 'value': '97.42', 'rank': 23038716, 'percentile': 85.0, 'displayValue': '97.42'}}, 
+
+'p10': {'trnRating': {'label': 'TRN Rating', 'field': 'TRNRating', 'category': 'Rating', 'valueInt': 1182, 'value': '1182', 'rank': 26321439, 'percentile': 54.0, 'displayValue': '1,182'}, 'score': {'label': 'Score', 'field': 'Score', 'category': 'General', 'valueInt': 27841, 'value': '27841', 'rank': 13662507, 'percentile': 38.0, 'displayValue': '27,841'}, 'top1': {'label': 'Wins', 'field': 'Top1', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 16091753, 'displayValue': '0'}, 'top3': {'label': 'Top 3', 'field': 'Top3', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top5': {'label': 'Top 5', 'field': 'Top5', 'category': 'Tops', 'valueInt': 13, 'value': '13', 'rank': 13987309, 'percentile': 46.0, 'displayValue': '13'}, 'top6': {'label': 'Top 6', 'field': 'Top6', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top10': {'label': 'Top 10', 'field': 'Top10', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top12': {'label': 'Top 12', 'field': 'Top12', 'category': 'Tops', 'valueInt': 40, 'value': '40', 'rank': 13949400, 'percentile': 38.0, 'displayValue': '40'}, 'top25': {'label': 'Top 25', 'field': 'Top25', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'kd': {'label': 'K/d', 'field': 'KD', 'category': 'General', 'valueDec': 0.18, 'value': '0.18', 'rank': 26425446, 'percentile': 95.0, 'displayValue': '0.18'}, 'winRatio': {'label': 'Win %', 'field': 'WinRatio', 'category': 'General', 'valueDec': 0.0, 'value': '0', 'rank': 16091252, 'displayValue': '0.00'}, 'matches': {'label': 'Matches', 'field': 'Matches', 'category': 'General', 'valueInt': 253, 'value': '253', 'rank': 12622461, 'percentile': 24.0, 'displayValue': '253'}, 'kills': {'label': 'Kills', 'field': 'Kills', 'category': 'General', 'valueInt': 46, 'value': '46', 'rank': 16350661, 'percentile': 63.0, 'displayValue': '46'}, 'kpg': {'label': 'Kills Per Match', 'field': 'KPG', 'category': 'General', 'valueDec': 0.18, 'value': '0.18', 'rank': 26417936, 'percentile': 95.0, 'displayValue': '0.18'}, 'scorePerMatch': {'label': 'Score per Match', 'field': 'ScorePerMatch', 'category': 'General', 'valueDec': 110.04, 'value': '110.04', 'rank': 22210310, 'percentile': 88.0, 'displayValue': '110.04'}}, 
+
+'p9': {'trnRating': {'label': 'TRN Rating', 'field': 'TRNRating', 'category': 'Rating', 'valueInt': 1085, 'value': '1085', 'rank': 1682136, 'percentile': 57.0, 'displayValue': '1,085'}, 'score': {'label': 'Score', 'field': 'Score', 'category': 'General', 'valueInt': 75447, 'value': '75447', 'rank': 10693744, 'percentile': 23.0, 'displayValue': '75,447'}, 'top1': {'label': 'Wins', 'field': 'Top1', 'category': 'Tops', 'valueInt': 5, 'value': '5', 'rank': 12613443, 'percentile': 49.0, 'displayValue': '5'}, 'top3': {'label': 'Top 3', 'field': 'Top3', 'category': 'Tops', 'valueInt': 29, 'value': '29', 'rank': 11430165, 'percentile': 33.0, 'displayValue': '29'}, 'top5': {'label': 'Top 5', 'field': 'Top5', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top6': {'label': 'Top 6', 'field': 'Top6', 'category': 'Tops', 'valueInt': 82, 'value': '82', 'rank': 10204981, 'percentile': 21.0, 'displayValue': '82'}, 'top10': {'label': 'Top 10', 'field': 'Top10', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top12': {'label': 'Top 12', 'field': 'Top12', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top25': {'label': 'Top 25', 'field': 'Top25', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'kd': {'label': 'K/d', 'field': 'KD', 'category': 'General', 'valueDec': 0.15, 'value': '0.15', 'rank': 28168874, 'percentile': 97.0, 'displayValue': '0.15'}, 'winRatio': {'label': 'Win %', 'field': 'WinRatio', 'category': 'General', 'valueDec': 0.9, 'value': '0.9', 'rank': 17096999, 'percentile': 70.0, 'displayValue': '0.90'}, 'matches': 
+{'label': 'Matches', 'field': 'Matches', 'category': 'General', 'valueInt': 569, 'value': '569', 'rank': 9080994, 'percentile': 10.0, 'displayValue': '569'}, 'kills': {'label': 'Kills', 'field': 'Kills', 'category': 'General', 'valueInt': 84, 'value': '84', 'rank': 15502657, 'percentile': 59.0, 'displayValue': '84'}, 'kpg': {'label': 'Kills Per Match', 'field': 'KPG', 'category': 'General', 'valueDec': 0.15, 'value': '0.15', 'rank': 28150156, 'percentile': 97.0, 'displayValue': '0.15'}, 'scorePerMatch': {'label': 'Score per Match', 'field': 'ScorePerMatch', 'category': 'General', 'valueDec': 132.6, 'value': '132.6', 'rank': 21855063, 'percentile': 85.0, 'displayValue': '132.60'}
+}, 
+
+'curr_p2': {'trnRating': {'label': 'TRN Rating', 'field': 'TRNRating', 'category': 'Rating', 'valueInt': 1181, 'value': '1181', 'rank': 26625148, 'percentile': 79.0, 'displayValue': '1,181'}, 'score': {'label': 'Score', 'field': 'Score', 'category': 'General', 'valueInt': 28591, 'value': '28591', 'rank': 2275433, 'percentile': 2.4, 'displayValue': '28,591'}, 'top1': {'label': 'Wins', 'field': 'Top1', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 5616575, 'displayValue': '0'}, 'top3': {'label': 'Top 3', 'field': 'Top3', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top5': {'label': 'Top 5', 'field': 'Top5', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top6': {'label': 'Top 6', 'field': 'Top6', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top10': {'label': 'Top 10', 'field': 'Top10', 'category': 'Tops', 'valueInt': 19, 'value': '19', 'rank': 3061728, 'percentile': 14.0, 'displayValue': '19'}, 'top12': {'label': 'Top 12', 'field': 'Top12', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top25': {'label': 'Top 25', 'field': 'Top25', 'category': 'Tops', 'valueInt': 49, 'value': '49', 'rank': 2652216, 'percentile': 3.8, 'displayValue': '49'}, 'kd': {'label': 'K/d', 'field': 'KD', 'category': 'General', 'valueDec': 0.28, 'value': '0.28', 'rank': 12724158, 'percentile': 95.0, 'displayValue': '0.28'}, 'winRatio': {'label': 'Win %', 'field': 'WinRatio', 'category': 'General', 'valueDec': 0.0, 'value': '0', 'rank': 5616491, 'displayValue': '0.00'}, 'matches': {'label': 'Matches', 'field': 'Matches', 'category': 'General', 'valueInt': 339, 'value': '339', 'rank': 994397, 'percentile': 0.4, 'displayValue': '339'}, 'kills': {'label': 'Kills', 'field': 'Kills', 'category': 'General', 'valueInt': 95, 'value': '95', 'rank': 4926317, 'percentile': 18.0, 'displayValue': '95'}, 'kpg': {'label': 'Kills Per Match', 'field': 'KPG', 'category': 'General', 'valueDec': 0.28, 'value': '0.28', 'rank': 12722128, 'percentile': 95.0, 'displayValue': '0.28'}, 'scorePerMatch': {'label': 'Score per Match', 'field': 'ScorePerMatch', 'category': 'General', 'valueDec': 84.34, 'value': '84.34', 'rank': 12345088, 'percentile': 89.0, 'displayValue': '84.34'}}, 
+
+'curr_p10': {'trnRating': {'label': 'TRN Rating', 'field': 'TRNRating', 'category': 'Rating', 'valueInt': 1182, 'value': '1182', 'rank': 26321439, 'percentile': 79.0, 'displayValue': '1,182'}, 'score': {'label': 'Score', 'field': 'Score', 'category': 'General', 'valueInt': 18252, 'value': '18252', 'rank': 5099205, 'percentile': 14.0, 'displayValue': '18,252'}, 'top1': {'label': 'Wins', 'field': 'Top1', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 7666569, 'displayValue': '0'}, 'top3': {'label': 'Top 3', 'field': 'Top3', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top5': {'label': 'Top 5', 'field': 'Top5', 'category': 'Tops', 'valueInt': 10, 'value': '10', 'rank': 5450744, 'percentile': 26.0, 'displayValue': '10'}, 'top6': {'label': 'Top 6', 'field': 'Top6', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top10': {'label': 'Top 10', 'field': 'Top10', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top12': {'label': 'Top 12', 'field': 'Top12', 'category': 'Tops', 'valueInt': 28, 'value': '28', 'rank': 5169055, 'percentile': 17.0, 'displayValue': '28'}, 'top25': {'label': 'Top 25', 'field': 'Top25', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'kd': {'label': 'K/d', 'field': 'KD', 'category': 'General', 'valueDec': 0.23, 'value': '0.23', 'rank': 12614840, 'percentile': 95.0, 'displayValue': '0.23'}, 'winRatio': {'label': 'Win %', 'field': 'WinRatio', 'category': 'General', 'valueDec': 0.0, 'value': '0', 'rank': 7666565, 'displayValue': '0.00'}, 'matches': {'label': 'Matches', 'field': 'Matches', 'category': 'General', 'valueInt': 152, 'value': '152', 'rank': 4051581, 'percentile': 9.0, 'displayValue': '152'}, 'kills': {'label': 'Kills', 'field': 'Kills', 'category': 'General', 'valueInt': 35, 'value': '35', 'rank': 8222417, 'percentile': 52.0, 'displayValue': '35'}, 'kpg': {'label': 'Kills Per Match', 'field': 'KPG', 'category': 'General', 'valueDec': 0.23, 'value': '0.23', 'rank': 12609337, 'percentile': 95.0, 'displayValue': '0.23'}, 'scorePerMatch': {'label': 'Score per Match', 'field': 'ScorePerMatch', 'category': 'General', 'valueDec': 120.08, 'value': '120.08', 'rank': 10009273, 'percentile': 77.0, 'displayValue': '120.08'}}, 
+
+'curr_p9': {'trnRating': {'label': 'TRN Rating', 'field': 'TRNRating', 'category': 'Rating', 'valueInt': 1085, 'value': '1085', 'rank': 1682136, 'percentile': 99.0, 'displayValue': '1,085'}, 'score': {'label': 'Score', 'field': 'Score', 'category': 'General', 'valueInt': 43484, 'value': '43484', 'rank': 2634974, 'percentile': 9.0, 'displayValue': '43,484'}, 'top1': {'label': 'Wins', 'field': 'Top1', 'category': 'Tops', 'valueInt': 5, 'value': '5', 'rank': 4145643, 'percentile': 30.0, 'displayValue': '5'}, 'top3': {'label': 'Top 3', 'field': 'Top3', 'category': 'Tops', 'valueInt': 22, 'value': '22', 'rank': 3008734, 'percentile': 15.0, 'displayValue': '22'}, 'top5': {'label': 'Top 5', 'field': 'Top5', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top6': {'label': 'Top 6', 'field': 'Top6', 'category': 'Tops', 'valueInt': 59, 'value': '59', 'rank': 2017665, 'percentile': 8.0, 'displayValue': '59'}, 'top10': {'label': 'Top 10', 'field': 'Top10', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top12': {'label': 'Top 12', 'field': 'Top12', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'top25': {'label': 'Top 25', 'field': 'Top25', 'category': 'Tops', 'valueInt': 0, 'value': '0', 'rank': 1, 'displayValue': '0'}, 'kd': {'label': 'K/d', 'field': 'KD', 'category': 'General', 'valueDec': 0.19, 'value': '0.19', 'rank': 12947222, 'percentile': 96.0, 'displayValue': '0.19'}, 'winRatio': {'label': 'Win %', 'field': 'WinRatio', 'category': 'General', 'valueDec': 1.6, 'value': '1.6', 'rank': 7666387, 'percentile': 59.0, 'displayValue': '1.60'}, 'matches': {'label': 'Matches', 'field': 'Matches', 'category': 'General', 'valueInt': 307, 'value': '307', 'rank': 1575615, 'percentile': 3.9, 'displayValue': '307'}, 'kills': {'label': 'Kills', 'field': 'Kills', 'category': 'General', 'valueInt': 57, 'value': '57', 'rank': 7058980, 'percentile': 45.0, 'displayValue': '57'}, 'kpg': {'label': 'Kills Per Match', 'field': 'KPG', 'category': 'General', 'valueDec': 0.19, 'value': '0.19', 'rank': 12988873, 'percentile': 96.0, 'displayValue': '0.19'}, 'scorePerMatch': {'label': 'Score per Match', 'field': 'ScorePerMatch', 'category': 'General', 'valueDec': 141.64, 'value': '141.64', 'rank': 10057712, 'percentile': 77.0, 'displayValue': '141.64'}}}, 
+
+'lifeTimeStats': 
+[
+{'key': 'Top 5s', 'value': '13'}, 
+{'key': 'Top 3s', 'value': '29'}, 
+{'key': 'Top 6s', 'value': '82'}, 
+{'key': 'Top 10', 'value': '32'}, 
+{'key': 'Top 12s', 'value': '40'}, 
+{'key': 'Top 25s', 'value': '96'}, 
+{'key': 'Score', 'value': '149,658'}, 
+{'key': 'Matches Played', 'value': '1298'}, 
+{'key': 'Wins', 'value': '5'}, 
+{'key': 'Win%', 'value': '0%'}, 
+{'key': 'Kills', 'value': '237'}, 
+{'key': 'K/d', 'value': '0.18'}], 
+
+'recentMatches': 
+[{'id': 670985738, 'accountId': 'b4c4e32f-2c2c-4486-9faf-f9e6dfd7b1d8', 'playlist': 'p9', 'kills': 1, 'minutesPlayed': 0, 'top1': 0, 'top5': 0, 'top6': 0, 'top10': 0, 'top12': 0, 'top25': 0, 'matches': 2, 'top3': 0, 'dateCollected': '2018-09-03T11:40:36.46', 'score': 259, 'platform': 2, 'trnRating': 1085.0, 'trnRatingChange': -3.077105625000004}, {'id': 670985737, 'accountId': 'b4c4e32f-2c2c-4486-9faf-f9e6dfd7b1d8', 'playlist': 'p10', 'kills': 0, 'minutesPlayed': 1, 'top1': 0, 'top5': 0, 'top6': 0, 'top10': 0, 'top12': 0, 'top25': 0, 'matches': 1, 'top3': 0, 'dateCollected': '2018-09-03T11:40:36.453', 'score': 42, 'platform': 2, 'trnRating': 1182.6, 'trnRatingChange': -0.4647500000000025}, {'id': 670917258, 'accountId': 'b4c4e32f-2c2c-4486-9faf-f9e6dfd7b1d8', 'playlist': 'p9', 'kills': 2, 'minutesPlayed': 0, 'top1': 0, 'top5': 0, 'top6': 2, 'top10': 0, 'top12': 0, 'top25': 0, 'matches': 9, 'top3': 0, 'dateCollected': '2018-09-03T11:11:34.227', 'score': 1220, 'platform': 2, 'trnRating': 1091.1, 'trnRatingChange': -2.9145402106403533}, {'id': 670917253, 'accountId': 'b4c4e32f-2c2c-4486-9faf-f9e6dfd7b1d8', 'playlist': 'p2', 'kills': 2, 'minutesPlayed': 0, 'top1': 0, 'top5': 0, 'top6': 0, 'top10': 1, 'top12': 0, 'top25': 1, 'matches': 8, 'top3': 0, 'dateCollected': '2018-09-03T11:11:34.193', 'score': 992, 'platform': 2, 'trnRating': 1181.6, 'trnRatingChange': -0.4914252139332655}, {'id': 670917251, 'accountId': 'b4c4e32f-2c2c-4486-9faf-f9e6dfd7b1d8', 'playlist': 'p10', 'kills': 1, 'minutesPlayed': 3, 'top1': 0, 'top5': 0, 'top6': 0, 'top10': 0, 'top12': 1, 'top25': 0, 'matches': 3, 'top3': 0, 'dateCollected': '2018-09-03T11:11:34.163', 'score': 481, 'platform': 2, 'trnRating': 1183.1, 'trnRatingChange': -0.45362583749999774}, {'id': 663211858, 'accountId': 'b4c4e32f-2c2c-4486-9faf-f9e6dfd7b1d8', 'playlist': 'p2', 'kills': 1, 'minutesPlayed': 0, 'top1': 0, 'top5': 0, 'top6': 0, 'top10': 0, 'top12': 0, 'top25': 0, 'matches': 5, 'top3': 0, 'dateCollected': '2018-09-01T17:56:04.333', 'score': 260, 'platform': 2, 'trnRating': 1191.3, 'trnRatingChange': -0.2329558432175355}, {'id': 663139627, 'accountId': 'b4c4e32f-2c2c-4486-9faf-f9e6dfd7b1d8', 'playlist': 'p9', 'kills': 0, 'minutesPlayed': 0, 'top1': 1, 'top5': 0, 'top6': 2, 'top10': 0, 'top12': 0, 'top25': 0, 'matches': 2, 'top3': 1, 'dateCollected': '2018-09-01T17:37:57.933', 'score': 985, 'platform': 2, 'trnRating': 1334.0, 'trnRatingChange': 37.03008}, {'id': 663139625, 'accountId': 'b4c4e32f-2c2c-4486-9faf-f9e6dfd7b1d8', 'playlist': 'p2', 'kills': 5, 'minutesPlayed': 0, 'top1': 0, 'top5': 0, 'top6': 0, 'top10': 0, 'top12': 0, 'top25': 3, 'matches': 18, 'top3': 0, 'dateCollected': '2018-09-01T17:37:57.91', 'score': 1418, 'platform': 2, 'trnRating': 1192.4, 'trnRatingChange': -0.02088432507375768}, {'id': 663139620, 'accountId': 'b4c4e32f-2c2c-4486-9faf-f9e6dfd7b1d8', 'playlist': 'p10', 'kills': 3, 'minutesPlayed': 2, 'top1': 0, 'top5': 0, 'top6': 0, 'top10': 0, 'top12': 1, 'top25': 0, 'matches': 2, 'top3': 0, 'dateCollected': '2018-09-01T17:37:57.887', 'score': 386, 'platform': 2, 'trnRating': 1145.4, 'trnRatingChange': -1.200982499999999}, {'id': 654935183, 'accountId': 'b4c4e32f-2c2c-4486-9faf-f9e6dfd7b1d8', 'playlist': 'p9', 'kills': 2, 'minutesPlayed': 0, 'top1': 0, 'top5': 0, 'top6': 0, 'top10': 0, 'top12': 0, 'top25': 0, 'matches': 11, 'top3': 0, 'dateCollected': '2018-08-30T18:29:51.933', 'score': 1156, 'platform': 2, 'trnRating': 1142.7, 'trnRatingChange': -0.15715716720474632}]}
+
+
+
+REsponse from Challenges API
+{'items': 
+[
+{'metadata': 
+[{'key': 'type', 'value': 'challenge'}, 
+{'key': 'name', 'value': 'Place Traps'}, 
+{'key': 'questsCompleted', 'value': '0'}, 
+{'key': 'questsTotal', 'value': '10'}, 
+{'key': 'rewardPictureUrl', 'value': 'https://cdn.thetrackernetwork.com/cdn/trackernetwork/63D2upload.png'}, 
+{'key': 'rewardName', 'value': '5'}, {'key': 'rewardDescription'}]
+}, 
+
+{'metadata': [{'key': 'type', 'value': 'challenge'}, {'key': 'name', 'value': 'Search Chests in Wailing Woods'}, {'key': 'questsCompleted', 'value': '0'}, {'key': 'questsTotal', 'value': '7'}, {'key': 'rewardPictureUrl', 'value': 'https://cdn.thetrackernetwork.com/cdn/trackernetwork/63D2upload.png'}, {'key': 'rewardName', 'value': '5'}, {'key': 'rewardDescription'}]}, 
+
+'metadata': [{'key': 'type', 'value': 'challenge'}, {'key': 'name', 'value': 'Shotgun Eliminations'}, {'key': 'questsCompleted', 'value': '0'}, {'key': 'questsTotal', 'value': '4'}, {'key': 'rewardPictureUrl', 'value': 'https://cdn.thetrackernetwork.com/cdn/trackernetwork/63D2upload.png'}, {'key': 'rewardName', 'value': '10'}, {'key': 'rewardDescription'}]}, 
+
+{'metadata': [{'key': 'type', 'value': 'challenge'}, {'key': 'name', 'value': 'Deal damage with a Pickaxe to opponents'}, {'key': 'questsCompleted', 'value': '0'}, {'key': 'questsTotal', 'value': '250'}, {'key': 'rewardPictureUrl', 'value': 'https://cdn.thetrackernetwork.com/cdn/trackernetwork/63D2upload.png'}, {'key': 'rewardName', 'value': '5'}, {'key': 'rewardDescription'}]}, 
+
+{'metadata': [{'key': 'type', 'value': 'challenge'}, {'key': 'name', 'value': 'Use a Rift at different Rift spawn locations'}, {'key': 'questsCompleted', 'value': '0'}, {'key': 'questsTotal', 'value': '1'}, {'key': 'rewardPictureUrl', 'value': 'https://cdn.thetrackernetwork.com/cdn/trackernetwork/63D2upload.png'}, {'key': 'rewardName', 'value': '5'}, {'key': 'rewardDescription'}]}, {
+
+'metadata': [{'key': 'type', 'value': 'challenge'}, {'key': 'name', 'value': 'Search between three oversized seats'}, {'key': 'questsCompleted', 'value': '0'}, {'key': 'questsTotal', 'value': '1'}, {'key': 'rewardPictureUrl', 'value': 'https://cdn.thetrackernetwork.com/cdn/trackernetwork/63D2upload.png'}, {'key': 'rewardName', 'value': '10'}, {'key': 'rewardDescription'}]}, 
+
+{'metadata': [{'key': 'type', 'value': 'challenge'}, {'key': 'name', 'value': 'Stage 1: Eliminate an opponent in Greasy Grove'}, {'key': 'questsCompleted', 'value': '0'}, {'key': 'questsTotal', 'value': '1'}, {'key': 'rewardPictureUrl', 'value': 'https://cdn.thetrackernetwork.com/cdn/trackernetwork/63D2upload.png'}, {'key': 'rewardName', 'value': '1'}, {'key': 'rewardDescription'}]}
+]
+}
